@@ -11,23 +11,19 @@ const props = defineProps<{
             fill="#F24E1E" />
         <path class="filled-heart" :class="{ active: props.clicked }"
             d="M20 36.7L17.1 34.06C6.8 24.72 0 18.56 0 11C0 4.84 4.84 0 11 0C14.48 0 17.82 1.62 20 4.18C22.18 1.62 25.52 0 29 0C35.16 0 40 4.84 40 11C40 18.56 33.2 24.72 22.9 34.08L20 36.7Z"
-            fill="#FF3A00" />
+            fill="#F24E1E" />
     </svg>
 </template>
 
 <style scoped>
-svg path {
-    transition: fill .1s;
-}
-svg:hover path {
-    fill: #F24E1E;
-}
-
 .filled-heart {
     opacity: 0;
-    transition: opacity .1s;
+    transition: opacity .1s, fill .1s;
+}
+.filled-heart.active, .filled-heart:hover {
+    opacity: 1;
 }
 .filled-heart.active {
-    opacity: 1;
+    fill: #FF3A00;
 }
 </style>
