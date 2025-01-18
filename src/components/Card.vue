@@ -26,6 +26,7 @@ function onToggle() {
     position: relative;
     background-color: #00000005;
     line-height: 0;
+    aspect-ratio: 1;
 }
 
 .card img {
